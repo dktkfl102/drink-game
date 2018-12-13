@@ -1,16 +1,25 @@
-<div class="start-content" *ngIf="timer > 0">
+<div class="start-content" *ngIf="startTimer > 0">
     <mat-card>
         <div class="timer">
-            <span>
+            <span id="startTimerAni">
                 {{startTimer}}
             </span>
         </div>
         <button mat-fab color="accent" (click)="onStartGame()">Start!</button>
     </mat-card>
 </div>
-<div class="content" *ngIf="timer == 0">
+<div class="content" *ngIf="startTimer == 0">
     <mat-card>
-        
+        <div class="quiz-word">
+            <span>{{quizWord}}</span>
+        </div>
+        <div class="quiz-wrapper">
+            <span id="wrapperAni">ㅇㅇ</span>
+        </div>
+        <div class="button-wrapper">
+            <button mat-fab color="warn" (click)="onPauseGame()" *ngIf="isStop == false">Stop!</button>
+            <button mat-fab color="accent" (click)="onResumeGame()" *ngIf="isStop == true">Resume!</button>
+        </div>
     </mat-card>
 </div>
 

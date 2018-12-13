@@ -1,7 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+/* Common */
+
+mat-card {
+    margin-left: 25vw;
+    margin-top: 10vh;
+    width: 50vw;
+    height: 40vh;
+}
+
+.start-content .timer span.fade {
+    color: #3f51b5;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-name: fade-in;
+    animation-direction: alternate;
+}
+
+@keyframes fade-in {
+    from { opacity: 1;}
+    to {opacity: 0;}
+}
+
+
+
+
 
 /* start-content */
-
 .start-content {
     position: absolute;
     top: 0;
@@ -11,6 +39,52 @@
     height: 100%;
 }
 
-.start-content div {
-    
+.start-content .timer span {
+    color: white;
+    font-size: 15vh;
+    padding: 7vh 0;
+    display: block;
 }
+
+.start-content div {
+
+}
+
+
+/* content */
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content .quiz-word span {
+    color: #222222;
+    font-size: 15vh;
+    padding: 7vh 0;
+    display: block;
+}
+
+.content .quiz-wrapper {
+    position: absolute;
+    top: 11vh;
+    left: 27.5vw;
+}
+
+.content .quiz-wrapper span {
+    color: #222222;
+    background: #222222;
+    font-size: 15vh;
+    display: block;
+    border-radius: 23%;
+}
+
+.content .quiz-wrapper span.fade {
+    color: transparent;
+    background: transparent;
+    transition: all 0.2s;
+}
+
